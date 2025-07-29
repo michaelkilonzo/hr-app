@@ -10,7 +10,7 @@ async function run() {
     connection = await oracledb.getConnection({
       user: process.env.DB_USER,
       password: process.env.DB_PASS,
-      connectString: `(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=oracle.cs.torontomu.ca)(PORT=1521))(CONNECT_DATA=(SID=orcl)))`
+      connectString: process.env.DB_HOST
     });
 
     const result = await connection.execute(`

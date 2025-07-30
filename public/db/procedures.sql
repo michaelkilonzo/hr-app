@@ -42,4 +42,5 @@ END;
 
 select * from hr_employees;
 
-delete from hr_employees where first_name = 'Testing';
+delete from HR_EMPLOYEES where first_name = 'test';
+

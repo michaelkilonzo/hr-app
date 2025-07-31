@@ -42,5 +42,5 @@ END;
 
 select * from hr_employees;
 
-delete from HR_EMPLOYEES where EMPLOYEE_ID = '213';
+delete from HR_EMPLOYEES where EMPLOYEE_ID = '214';
 

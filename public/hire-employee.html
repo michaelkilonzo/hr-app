@@ -2,11 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hire Employee</title>
+  <title>HR APP | Employees</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 </head>
 <body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">HR APP</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="employeeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Employees
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="employeeDropdown">
+            <li><a class="dropdown-item" href="hire-employee.html">Hire Employee</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="jobsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Jobs
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="jobsDropdown">
+            <!-- <li><a class="dropdown-item" href="hire-employee.html">Hire Employee</a></li> -->
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="departmentsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Departments
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="departmentsDropdown">
+            <!-- <li><a class="dropdown-item" href="hire-employee.html">Hire Employee</a></li> -->
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
   <div class="container py-5">
     <h1 class="mb-4">Hire New Employee</h1>
@@ -75,6 +113,7 @@
 
     <div id="message" class="alert mt-3 d-none"></div>
   </div>
-<script src="hire.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="hire-employee.js"></script>
 </body>
 </html>

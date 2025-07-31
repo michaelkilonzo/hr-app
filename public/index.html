@@ -1,80 +1,29 @@
+<!-- public/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hire Employee</title>
+  <title>Home | Employee Portal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 </head>
 <body class="bg-light">
-
-  <div class="container py-5">
-    <h1 class="mb-4">Hire New Employee</h1>
-
-    <form id="hireForm" class="card p-4 shadow-sm bg-white">
-      <div class="mb-3">
-        <label for="first_name" class="form-label">First Name</label>
-        <input name="first_name" id="first_name" class="form-control" required>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Employee Portal</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="hire.html">Hire Employee</a>
+          </li>
+        </ul>
       </div>
+    </div>
+  </nav>
 
-      <div class="mb-3">
-        <label for="last_name" class="form-label">Last Name</label>
-        <input name="last_name" id="last_name" class="form-control" required>
-      </div>
-
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input name="email" id="email" type="email" class="form-control" required>
-      </div>
-
-      <div class="mb-3">
-        <label for="phone" class="form-label">Phone Number</label>
-        <input name="phone" id="phone" class="form-control" required>
-      </div>
-
-      <div class="mb-3">
-        <label for="salary" class="form-label">Salary</label>
-        <input name="salary" id="salary" type="number" step="0.01" class="form-control" required>
-      </div>
-
-  <div class="mb-3">
-    <label for="job_id" class="form-label">Job ID</label>
-    <select name="job_id" id="job_id" class="form-select" required>
-      <option value="">Select Job ID</option>
-      <option value="SA_REP">SA_REP</option>
-      <option value="IT_PROG">IT_PROG</option>
-      <option value="HR_REP">HR_REP</option>
-    </select>
-  </div>
-
-  <div class="mb-3">
-    <label for="manager_id" class="form-label">Manager ID</label>
-    <select name="manager_id" id="manager_id" class="form-select" required>
-      <option value="">Select Manager ID</option>
-      <option value="101">101 - John Smith</option>
-      <option value="102">102 - Jane Doe</option>
-      <option value="103">103 - Alice Lee</option>
-    </select>
-  </div>
-
-  <div class="mb-3">
-    <label for="department_id" class="form-label">Department ID</label>
-    <select name="department_id" id="department_id" class="form-select" required>
-      <option value="">Select Department ID</option>
-      <option value="10">10 - Sales</option>
-      <option value="20">20 - IT</option>
-      <option value="30">30 - HR</option>
-    </select>
-  </div>
-
-      <div class="d-flex justify-content-between">
-        <button type="reset" class="btn btn-outline-secondary">Cancel</button>
-        <button type="submit" class="btn btn-primary">Hire</button>
-      </div>
-    </form>
-
-    <div id="message" class="alert mt-3 d-none"></div>
-  </div>
-<script src="script.js"></script>
+  <main class="container py-5">
+    <h1 class="mb-4">Welcome to the Employee Portal</h1>
+    <p class="lead">Use the navigation bar to hire a new employee or manage other tasks.</p>
+  </main>
 </body>
 </html>

@@ -40,7 +40,9 @@ END;
 /
 
 
-select * from hr_employees;
+select distinct job_id from hr_employees order by job_id;
 
-delete from HR_EMPLOYEES where EMPLOYEE_ID = '214';
+select department_id, department_name from hr_departments;
+
+select * from hr_jobs order by job_title;
 

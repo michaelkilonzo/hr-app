@@ -26,7 +26,7 @@ BEGIN
 END;
 /
 
-
+-- TODO: trigger on each insert/delete into HR_EMPLOYEES
 DECLARE
   v_max_id NUMBER;
   v_sql    VARCHAR2(1000);
@@ -42,5 +42,5 @@ END;
 
 select * from hr_employees;
 
-delete from HR_EMPLOYEES where first_name = 'test';
+delete from HR_EMPLOYEES where EMPLOYEE_ID = '213';
 

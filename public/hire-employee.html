@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>HR APP | Employees</title>
+  <title>HR APP | Hire</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
 </head>
+
 <body class="bg-light">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">HR APP</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HR APP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="employeeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Employees
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="employeeDropdown">
-            <li><a class="dropdown-item" href="hire-employee.html">Hire</a></li>
-            <li><a class="dropdown-item" href="update-employee.html">Update</a></li>
-            <li><a class="dropdown-item" href="terminate-employee.html">Terminate</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="jobsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Jobs
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="jobsDropdown">
-            <!-- <li><a class="dropdown-item" href="hire-employee.html">Hire Employee</a></li> -->
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="departmentsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Departments
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="departmentsDropdown">
-            <!-- <li><a class="dropdown-item" href="hire-employee.html">Hire Employee</a></li> -->
-          </ul>
-        </li>
-      </ul>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="employeeDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Employees
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="employeeDropdown">
+              <li><a class="dropdown-item" href="hire-employee.html">Hire</a></li>
+              <li><a class="dropdown-item" href="update-employee.html">Update</a></li>
+              <li><a class="dropdown-item" href="terminate-employee.html">Terminate</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="jobsDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Jobs
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="jobsDropdown">
+              <!-- <li><a class="dropdown-item" href="hire-employee.html">Hire Employee</a></li> -->
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="departmentsDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Departments
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="departmentsDropdown">
+              <!-- <li><a class="dropdown-item" href="hire-employee.html">Hire Employee</a></li> -->
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <div class="container py-5">
     <h1 class="mb-4">Hire New Employee</h1>
@@ -77,88 +83,88 @@
         <input name="salary" id="salary" type="number" step="0.01" class="form-control" required>
       </div>
 
-  <div class="mb-3">
-<label for="job_id" class="form-label">Job</label>
-<select class="form-select" id="job_id" name="job_id" required>
-  <option value="" disabled selected>Select Job</option>
-  <option value="FI_ACCOUNT">Accountant</option>
-  <option value="AC_MGR">Accounting Manager</option>
-  <option value="AD_ASST">Administration Assistant</option>
-  <option value="AD_VP">Administration Vice President</option>
-  <option value="FI_MGR">Finance Manager</option>
-  <option value="HR_REP">Human Resources Representative</option>
-  <option value="MK_MAN">Marketing Manager</option>
-  <option value="MK_REP">Marketing Representative</option>
-  <option value="AD_PRES">President</option>
-  <option value="IT_PROG">Programmer</option>
-  <option value="AC_ACCOUNT">Public Accountant</option>
-  <option value="PR_REP">Public Relations Representative</option>
-  <option value="PU_CLERK">Purchasing Clerk</option>
-  <option value="PU_MAN">Purchasing Manager</option>
-  <option value="SA_MAN">Sales Manager</option>
-  <option value="SA_REP">Sales Representative</option>
-  <option value="SH_CLERK">Shipping Clerk</option>
-  <option value="ST_CLERK">Stock Clerk</option>
-  <option value="ST_MAN">Stock Manager</option>
-</select>
-  </div>
+      <div class="mb-3">
+        <label for="job_id" class="form-label">Job</label>
+        <select class="form-select" id="job_id" name="job_id" required>
+          <option value="" disabled selected>Select Job</option>
+          <option value="FI_ACCOUNT">Accountant</option>
+          <option value="AC_MGR">Accounting Manager</option>
+          <option value="AD_ASST">Administration Assistant</option>
+          <option value="AD_VP">Administration Vice President</option>
+          <option value="FI_MGR">Finance Manager</option>
+          <option value="HR_REP">Human Resources Representative</option>
+          <option value="MK_MAN">Marketing Manager</option>
+          <option value="MK_REP">Marketing Representative</option>
+          <option value="AD_PRES">President</option>
+          <option value="IT_PROG">Programmer</option>
+          <option value="AC_ACCOUNT">Public Accountant</option>
+          <option value="PR_REP">Public Relations Representative</option>
+          <option value="PU_CLERK">Purchasing Clerk</option>
+          <option value="PU_MAN">Purchasing Manager</option>
+          <option value="SA_MAN">Sales Manager</option>
+          <option value="SA_REP">Sales Representative</option>
+          <option value="SH_CLERK">Shipping Clerk</option>
+          <option value="ST_CLERK">Stock Clerk</option>
+          <option value="ST_MAN">Stock Manager</option>
+        </select>
+      </div>
 
-  <div class="mb-3">
-<label for="manager_id" class="form-label">Manager</label>
-<select class="form-select" id="manager_id" name="manager_id">
-  <option value="" disabled selected>Select Manager</option>
-  <option value="148">Gerald Cambrault</option>
-  <option value="147">Alberto Errazuriz</option>
-  <option value="121">Adam Fripp</option>
-  <option value="102">Lex De Haan</option>
-  <option value="201">Michael Hartstein</option>
-  <option value="101">Neena Kochhar</option>
-  <option value="122">Payam Kaufling</option>
-  <option value="124">Kevin Mourgos</option>
-  <option value="146">Karen Partners</option>
-  <option value="114">Den Raphaely</option>
-  <option value="145">John Russell</option>
-  <option value="120">Matthew Weiss</option>
-  <option value="123">Shanta Vollman</option>
-  <option value="149">Eleni Zlotkey</option>
-</select>
+      <div class="mb-3">
+        <label for="manager_id" class="form-label">Manager</label>
+        <select class="form-select" id="manager_id" name="manager_id">
+          <option value="" disabled selected>Select Manager</option>
+          <option value="148">Gerald Cambrault</option>
+          <option value="147">Alberto Errazuriz</option>
+          <option value="121">Adam Fripp</option>
+          <option value="102">Lex De Haan</option>
+          <option value="201">Michael Hartstein</option>
+          <option value="101">Neena Kochhar</option>
+          <option value="122">Payam Kaufling</option>
+          <option value="124">Kevin Mourgos</option>
+          <option value="146">Karen Partners</option>
+          <option value="114">Den Raphaely</option>
+          <option value="145">John Russell</option>
+          <option value="120">Matthew Weiss</option>
+          <option value="123">Shanta Vollman</option>
+          <option value="149">Eleni Zlotkey</option>
+        </select>
 
-  </div>
+      </div>
 
-  <div class="mb-3">
-<label for="department_id" class="form-label">Department</label>
-<select class="form-select" id="department_id" name="department_id" required>
-  <option value="" disabled selected>Select Department</option>
-  <option value="110">Accounting</option>
-  <option value="160">Benefits</option>
-  <option value="130">Corporate Tax</option>
-  <option value="140">Control And Credit</option>
-  <option value="190">Contracting</option>
-  <option value="10">Administration</option>
-  <option value="180">Construction</option>
-  <option value="100">Finance</option>
-  <option value="240">Government Sales</option>
-  <option value="60">IT</option>
-  <option value="230">IT Helpdesk</option>
-  <option value="210">IT Support</option>
-  <option value="20">Marketing</option>
-  <option value="170">Manufacturing</option>
-  <option value="220">NOC</option>
-  <option value="200">Operations</option>
-  <option value="40">Human Resources</option>
-  <option value="90">Executive</option>
-  <option value="270">Payroll</option>
-  <option value="30">Purchasing</option>
-  <option value="260">Recruiting</option>
-  <option value="250">Retail Sales</option>
-  <option value="80">Sales</option>
-  <option value="150">Shareholder Services</option>
-  <option value="50">Shipping</option>
-  <option value="70">Public Relations</option>
-  <option value="120">Treasury</option>
-</select>
+      <div class="mb-3">
+        <label for="department_id" class="form-label">Department</label>
+        <select class="form-select" id="department_id" name="department_id" required>
+          <option value="" disabled selected>Select Department</option>
+          <option value="110">Accounting</option>
+          <option value="160">Benefits</option>
+          <option value="130">Corporate Tax</option>
+          <option value="140">Control And Credit</option>
+          <option value="190">Contracting</option>
+          <option value="10">Administration</option>
+          <option value="180">Construction</option>
+          <option value="100">Finance</option>
+          <option value="240">Government Sales</option>
+          <option value="60">IT</option>
+          <option value="230">IT Helpdesk</option>
+          <option value="210">IT Support</option>
+          <option value="20">Marketing</option>
+          <option value="170">Manufacturing</option>
+          <option value="220">NOC</option>
+          <option value="200">Operations</option>
+          <option value="40">Human Resources</option>
+          <option value="90">Executive</option>
+          <option value="270">Payroll</option>
+          <option value="30">Purchasing</option>
+          <option value="260">Recruiting</option>
+          <option value="250">Retail Sales</option>
+          <option value="80">Sales</option>
+          <option value="150">Shareholder Services</option>
+          <option value="50">Shipping</option>
+          <option value="70">Public Relations</option>
+          <option value="120">Treasury</option>
+        </select>
 
-  </div>
+      </div>
       <div class="d-flex justify-content-between">
         <button type="reset" class="btn btn-outline-secondary">Cancel</button>
         <button type="submit" class="btn btn-primary">Hire</button>
@@ -167,7 +173,9 @@
 
     <div id="message" class="alert mt-3 d-none"></div>
   </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script src="hire-employee.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+  <script src="hire-employee.js"></script>
 </body>
+
 </html>

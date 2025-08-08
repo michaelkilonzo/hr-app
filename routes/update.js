@@ -1,9 +1,11 @@
+// routes/update.js
+
 const express = require("express");
 const router = express.Router();
 const oracledb = require("oracledb");
 
-// GET employees
-router.get("/employees", async (req, res) => {
+// GET all employees
+router.get("/", async (req, res) => {
   let connection;
   try {
     connection = await oracledb.getConnection({
@@ -13,16 +15,17 @@ router.get("/employees", async (req, res) => {
     });
 
     const result = await connection.execute(
-      `SELECT employee_id, first_name, last_name, email, phone_number FROM HR_EMPLOYEES`
+      `SELECT employee_id, first_name, last_name, email, phone_number, salary FROM HR_EMPLOYEES`
     );
 
     res.json(
       result.rows.map(row => ({
-        employeeId: row[0],
-        firstName: row[1],
-        lastName: row[2],
-        email: row[3],
-        phoneNumber: row[4],
+        employeeId: row.EMPLOYEE_ID,
+        firstName: row.FIRST_NAME,
+        lastName: row.LAST_NAME,
+        email: row.EMAIL,
+        phoneNumber: row.PHONE_NUMBER,
+        salary: row.SALARY
       }))
     );
   } catch (err) {
@@ -33,11 +36,10 @@ router.get("/employees", async (req, res) => {
   }
 });
 
-// PUT update employees (email, phone only)
-router.put("/employees", async (req, res) => {
+// PUT update employees (email, phone, salary)
+router.put("/", async (req, res) => {
   let connection;
   const updates = req.body.updates;
-
   if (!updates || !Array.isArray(updates) || updates.length === 0) {
     return res.status(400).json({ error: "No updates provided" });
   }
@@ -52,12 +54,14 @@ router.put("/employees", async (req, res) => {
     const updateSQL = `
       UPDATE HR_EMPLOYEES
       SET email = :email,
-          phone_number = :phone
+          phone_number = :phone,
+          salary = :salary
       WHERE employee_id = :id
     `;
 
     for (const emp of updates) {
       await connection.execute(updateSQL, {
+        salary: emp.salary,
         email: emp.email,
         phone: emp.phoneNumber,
         id: emp.employeeId,

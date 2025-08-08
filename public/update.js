@@ -2,20 +2,19 @@ document.addEventListener("DOMContentLoaded", async () => {
   const tableBody = document.getElementById("employeeTable");
 
   try {
-    const res = await fetch("/api/employees/employees");
+    const res = await fetch("/api/employees");
     const employees = await res.json();
 
-    employees.forEach(emp => {
+    employees.forEach((emp) => {
       const row = document.createElement("tr");
-
       row.innerHTML = `
         <td><input type="checkbox" class="select-emp" value="${emp.employeeId}"></td>
         <td>${emp.employeeId}</td>
         <td>${emp.firstName} ${emp.lastName}</td>
-        <td><input type="text" value="${emp.phoneNumber || ''}" class="phone-input form-control" /></td>
-        <td><input type="email" value="${emp.email || ''}" class="email-input form-control" /></td>
+        <td><input type="text" value="${emp.phoneNumber || ""}" class="phone-input form-control" /></td>
+        <td><input type="email" value="${emp.email || ""}" class="email-input form-control" /></td>
+        <td><input type="number" value="${emp.salary || ""}" class="salary-input form-control" /></td>
       `;
-
       tableBody.appendChild(row);
     });
   } catch (err) {
@@ -29,14 +28,15 @@ document.getElementById("updateForm").addEventListener("submit", async (e) => {
   const rows = document.querySelectorAll("#employeeTable tr");
   const updates = [];
 
-  rows.forEach(row => {
+  rows.forEach((row) => {
     const checkbox = row.querySelector(".select-emp");
     if (checkbox && checkbox.checked) {
       const employeeId = checkbox.value;
-      const phone = row.querySelector(".phone-input").value.trim();
+      const phoneNumber = row.querySelector(".phone-input").value.trim();
       const email = row.querySelector(".email-input").value.trim();
+      const salary = row.querySelector(".salary-input").value.trim();
 
-      updates.push({ employeeId, phoneNumber: phone, email });
+      updates.push({ employeeId, phoneNumber, email, salary });
     }
   });
 
@@ -46,7 +46,7 @@ document.getElementById("updateForm").addEventListener("submit", async (e) => {
   }
 
   try {
-    const res = await fetch("/api/employees/employees", {
+    const res = await fetch("/api/employees", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ updates }),

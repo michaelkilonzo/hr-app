@@ -24,9 +24,12 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'app.html'));
 });
 
-const hireRoute = require('./routes/hire');
-app.use('/api/employees', hireRoute);
-app.use("/update", require("./routes/update"));
+app.use('/api/employees', require('./routes/hire'));
+
+app.use("/api/employees", require("./routes/update"));
+
+
+
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });

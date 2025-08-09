@@ -25,9 +25,10 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/employees/hire', require('./routes/hire'));
+
 app.use("/api/employees/update", require("./routes/update"));
 
-
+app.use('/api/employees/terminate', require('./routes/terminate'));
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);

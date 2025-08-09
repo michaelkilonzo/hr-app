@@ -42,3 +42,7 @@ END;
 -- Clean up test data
 delete from HR_EMPLOYEES where employee_id > 206;
 commit;
+
+/
+
+select * from hr_employees;

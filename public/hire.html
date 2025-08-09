@@ -13,29 +13,17 @@
 </head>
 
 <body class="bg-light">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
       <a class="navbar-brand" href="app.html">HR APP</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarContent"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="employeeDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
+            <a class="nav-link dropdown-toggle" href="#" id="employeeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Employees
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="employeeDropdown">
@@ -44,11 +32,27 @@
               <li><a class="dropdown-item" href="terminate.html">Terminate</a></li>
             </ul>
           </li>
-          <!-- Add other nav items as needed -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="jobsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Jobs
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="jobsDropdown">
+              <!-- Future job links -->
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="departmentsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Departments
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="departmentsDropdown">
+              <!-- Future department links -->
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+
 
   <div class="container py-5">
     <h1 class="text-center">Hire New Employee</h1>

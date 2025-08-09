@@ -39,10 +39,6 @@ BEGIN
 END;
 /
 
-
-select distinct job_id from hr_employees order by job_id;
-
-select department_id, department_name from hr_departments;
-
-select * from hr_jobs order by job_title;
-
+-- Clean up test data
+delete from HR_EMPLOYEES where employee_id > 206;
+commit;

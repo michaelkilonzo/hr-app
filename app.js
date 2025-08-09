@@ -24,9 +24,8 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'app.html'));
 });
 
-app.use('/api/employees', require('./routes/hire'));
-
-app.use("/api/employees", require("./routes/update"));
+app.use('/api/employees/hire', require('./routes/hire'));
+app.use("/api/employees/update", require("./routes/update"));
 
 
 

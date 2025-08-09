@@ -69,7 +69,7 @@ router.get('/departments', async (req, res) => {
 });
 
 // POST /api/employees/hire
-router.post('/hire', async (req, res) => {
+router.post('/', async (req, res) => {
   const {
     first_name,
     last_name,

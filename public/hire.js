@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
       manager_id: form.manager_id.value ? parseInt(form.manager_id.value) : null,
       department_id: parseInt(form.department_id.value),
     };
+    console.log(data.email);
 
     try {
       const res = await fetch('/api/employees/hire', {
@@ -50,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function loadJobs() {
   try {
-    const res = await fetch('/api/employees/jobs');
+    const res = await fetch('/api/employees/hire/jobs');
     const jobs = await res.json();
 
     const jobSelect = document.getElementById('job_id');
@@ -69,7 +70,7 @@ async function loadJobs() {
 
 async function loadManagers() {
   try {
-    const res = await fetch('/api/employees/managers');
+    const res = await fetch('/api/employees/hire/managers');
     const managers = await res.json();
 
     const managerSelect = document.getElementById('manager_id');
@@ -88,7 +89,7 @@ async function loadManagers() {
 
 async function loadDepartments() {
   try {
-    const res = await fetch('/api/employees/departments');
+    const res = await fetch('/api/employees/hire/departments');
     const departments = await res.json();
 
     const deptSelect = document.getElementById('department_id');

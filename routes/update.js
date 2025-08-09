@@ -60,9 +60,10 @@ router.put("/", async (req, res) => {
     `;
 
     for (const emp of updates) {
+      console.log("Updates received:", updates);
       await connection.execute(updateSQL, {
         salary: emp.salary,
-        email: emp.email,
+        email: emp.email, 
         phone: emp.phoneNumber,
         id: emp.employeeId,
       });

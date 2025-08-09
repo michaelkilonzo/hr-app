@@ -59,20 +59,23 @@
         <main class="container py-5 ">
             <h1 class="text-center">Terminate Employee</h1>
             <form id="terminateForm">
-                <table class="table table-bordered table-striped">
+                <div style="overflow-x: auto; max-height: 65vh;">
+                    <table class="table table-bordered table-striped">
                     <thead class="table-primary">
                         <tr>
-                            <th>Select</th>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Email</th>
-                            <th>Department</th>
+                            <th style="position: sticky; top: 0; z-index: 10;">Select</th>
+                            <th style="position: sticky; top: 0; z-index: 10;">ID</th>
+                            <th style="position: sticky; top: 0; z-index: 10;">Name</th>
+                            <th style="position: sticky; top: 0; z-index: 10;">Phone</th>
+                            <th style="position: sticky; top: 0; z-index: 10;">Email</th>
+                            <th style="position: sticky; top: 0; z-index: 10;">Department</th>
                         </tr>
                     </thead>
                     <tbody id="employeeTable"></tbody>
                 </table>
-                <button type="submit" class="btn btn-primary">Terminate Selected</button>
+                </div>
+                <button type="submit" class="btn btn-primary my-3">Terminate Selected</button>
+                <button type="reset" class="btn btn-secondary ms-2">Cancel</button>
             </form>
         </main>
         <!-- <main class="container py-5">

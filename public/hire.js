@@ -10,8 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = {
       first_name: form.first_name.value.trim(),
       last_name: form.last_name.value.trim(),
-      email: form.email.value.trim(),
-      phone: form.phone.value.trim(),
+      email: (form.email.value.trim().split('@')[0] || '').toUpperCase(),
+      phone: form.phone.value.replace(/\D/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '$1.$2.$3'),
+
       salary: parseFloat(form.salary.value),
       job_id: form.job_id.value,
       manager_id: form.manager_id.value ? parseInt(form.manager_id.value) : null,

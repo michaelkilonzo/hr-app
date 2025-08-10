@@ -36,7 +36,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// PUT update employees (email, phone, salary)
+
 router.put("/", async (req, res) => {
   let connection;
   const updates = req.body.updates;
